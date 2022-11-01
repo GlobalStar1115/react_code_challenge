@@ -1,0 +1,74 @@
+.expansion-keyword {
+  .keyword-title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 28px;
+
+    span {
+      font-size: 14px;
+    }
+    a {
+      color: $--blue;
+      cursor: pointer;
+      font-size: 11px;
+    }
+  }
+  .keyword-input {
+    margin-top: 6px;
+    height: 36px;
+    width: 100%;
+    border: 1px solid $keyword-border-color;
+    border-radius: 6px;
+    padding-left: 12px;
+  }
+  .btn-find-keyword {
+    height: 32px;
+    width: 162px;
+    margin-top: 28px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .keyword-container {
+    margin-top: 28px;
+    padding: 18px 20px;
+    border: 1px solid $keyword-border-color;
+    border-radius: 8px;
+    position: relative;
+    &.loading {
+      opacity: 0.5;
+    }
+
+    .container-title {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    .container-keywords {
+      display: flex;
+      flex-flow: wrap;
+
+      .keyword-box {
+        background: $--light-gray;
+        margin-right: 12px;
+        padding: 6px 16px;
+        border-radius: 3px;
+        white-space: nowrap;
+        margin-bottom: 8px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+    .container-footer {
+      display: flex;
+      margin-top: 14px;
+
+      .btn-usual {
+        padding: 0 15px;
+        margin-right: 14px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+
+  }
+}

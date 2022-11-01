@@ -1,0 +1,226 @@
+.ex-product-targeting-component {
+  .ex-product-targeting-header {
+    .product-targeting-tabs {
+      display: flex;
+
+      .tab {
+        padding: 10px 10px 10px 0px;
+        margin-right: 5px;
+        cursor: pointer;
+
+        &.selected {
+          border-bottom: 2px solid $--text-color;
+          color: $--text-color;
+        }
+        &:hover {
+          color: $--text-color;
+          border-bottom: 2px solid $--text-color;
+        }
+      }
+    }
+  }
+  .expansion-asin-targeting {
+    .asin-targeting-header {
+      display: flex;
+      flex-direction: column;
+      padding-top: 28px;
+
+      span {
+        font-size: 14px;
+      }
+      input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+    .btn-find-asin {
+      height: 32px;
+      width: 162px;
+      margin-top: 18px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .asin-targeting-container {
+      &.loading {
+        opacity: 0.5;
+      }
+      .search-asin-filter {
+        padding-top: 20px;
+        display: flex;
+      }
+      .checkbox-component {
+        padding-right: 10px;
+      }
+      .ex-asin-action {
+        display: flex;
+        padding-top: 10px;
+        .btn {
+          font-size: 13px;
+          cursor: pointer;
+          margin-right: 10px;
+          border-radius: 4px;
+          padding: 7px 22px;
+        }
+        .btn-active {
+          background-color:$green;
+          color: $white;
+          border: 1px solid $green;
+        }
+        .btn-pause {
+          padding: 7px 22px;
+          color: $gray;
+          border: 1px solid $gray;
+        }
+        .btn-remove {
+          background-color: $red;
+          color: $white;
+          border: 1px solid $red
+        }
+      }
+    }
+    .keyword-container {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border: 1px solid $keyword-border-color;
+      border-radius: 8px;
+      position: relative;
+      &.loading {
+        opacity: 0.5;
+      }
+      .container-title {
+        margin-bottom: 16px;
+        font-size: 15px;
+      }
+      .container-keywords {
+        display: flex;
+        flex-flow: wrap;
+
+        .keyword-box {
+          background: $--light-gray;
+          margin-right: 12px;
+          padding: 6px 16px;
+          border-radius: 3px;
+          white-space: nowrap;
+          margin-bottom: 8px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+      .container-footer {
+        display: flex;
+        margin-top: 14px;
+
+        .btn-usual {
+          padding: 0 15px;
+          margin-right: 14px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .expansion-category-targeting {
+    .category-targeting-header {
+      display: flex;
+      flex-direction: column;
+      padding-top: 28px;
+
+      span {
+        font-size: 14px;
+      }
+      input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+    .btn-find-category {
+      height: 32px;
+      width: 162px;
+      margin-top: 18px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .category-targeting-container {
+      &.loading {
+        opacity: 0.5;
+      }
+      .search-category-filter {
+        padding-top: 20px;
+        display: flex;
+      }
+      .checkbox-component {
+        padding-right: 10px;
+      }
+      .ex-category-action {
+        display: flex;
+        padding-top: 10px;
+        .btn {
+          font-size: 13px;
+          cursor: pointer;
+          margin-right: 10px;
+          border-radius: 4px;
+          padding: 7px 22px;
+        }
+        .btn-active {
+          background-color: $green;
+          color: $white;
+          border: 1px solid $green;
+        }
+        .btn-pause {
+          padding: 7px 22px;
+          color: $gray;
+          border: 1px solid $gray;
+        }
+        .btn-remove {
+          background-color: $red;
+          color: $white;
+          border: 1px solid $red;
+        }
+      }
+    }
+    .keyword-container {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border: 1px solid $keyword-border-color;
+      border-radius: 8px;
+      position: relative;
+      &.loading {
+        opacity: 0.5;
+      }
+      .container-title {
+        margin-bottom: 16px;
+        font-size: 15px;
+      }
+      .container-keywords {
+        display: flex;
+        flex-flow: wrap;
+
+        .keyword-box {
+          background: $--light-gray;
+          margin-right: 12px;
+          padding: 6px 16px;
+          border-radius: 3px;
+          white-space: nowrap;
+          margin-bottom: 8px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+      .container-footer {
+        display: flex;
+        margin-top: 14px;
+
+        .btn-usual {
+          padding: 0 15px;
+          margin-right: 14px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

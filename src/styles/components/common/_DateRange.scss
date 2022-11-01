@@ -1,0 +1,54 @@
+.date-range-component {
+	position: relative;
+	.rs-picker-toggle-clean {
+		display: none;
+	}
+}
+.rs-picker-menu {
+
+	.rs-picker-daterange-panel {
+		display: flex !important;
+
+		.rs-picker-daterange-content {
+			margin-left: 130px;
+		}
+		.rs-picker-toolbar {
+			height: 100%;
+			padding-top: 0;
+			position: absolute;
+			left: 0;
+			border-right: 1px solid #e5e5ea;
+
+			.rs-picker-toolbar-ranges {
+				display: block;
+				width: 120px;
+
+				a {
+					text-align: left;
+					width: 100%;
+					border-radius: 4px;
+					border-right: 0;
+					font-size: 12px;
+					padding: 5px 5px 5px 10px;
+					margin-bottom: 5px;
+					font-weight: 700;
+					&:hover {
+						text-decoration: none;
+						background: #b4dff6;
+					}
+					&:before {
+						content: unset;
+					}
+				}
+			}
+			.rs-picker-toolbar-right {
+				margin-top: 20px;
+				float: left;
+
+				button {
+					width: 80px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+.account-health-page {
+  @include page-layout;
+
+  .page-header {
+    .page-header__buttons {
+      display: flex;
+      font-size: 12px;
+      font-weight: 600;
+
+      .page-header__button-new {
+        padding: 7px 22px;
+        color: $--white;
+        background-color: $--accent;
+        border: 1px solid $--accent;
+        border-radius: 4px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.rs-modal-content {
+
+  .modal-body {
+    display: flex;
+
+    .body-tabs {
+      display: flex;
+      flex-direction: column;
+      border-right: 2px solid;
+      padding-right: 20px;
+
+      & > span {
+        padding: 5px 5px 5px 10px;
+        border-left: 2px solid $--white;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
+        &.selected {
+          border-left: 2px solid;
+          background: $--green;
+        }
+      }
+    }
+    .body-columns {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+
+      .metric-row {
+        display: flex;
+        margin-top: 10px;
+        cursor: pointer;
+
+        & > span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.product-chart-component {
+  display: flex;
+  height: 400px;
+  margin-top: 18px;
+  padding: 18px 25px;
+  background: $white;
+  box-shadow: $card-box-shadow;
+
+  .chart-area {
+    width: 100%;
+    height: 100%;
+
+    .chart-header {
+      height: 50px;
+    }
+    .chart-content {
+      height: calc(100% - 100px);
+      border-bottom: 1px solid $--light-white;
+
+      .recharts-xAxis {
+        .recharts-cartesian-axis-line {
+          stroke: none !important;
+        }
+        .recharts-cartesian-axis-tick-line {
+          stroke: none !important;
+        }
+      }
+      .recharts-yAxis {
+        .recharts-cartesian-axis-line {
+          stroke: none !important;
+        }
+        .recharts-cartesian-axis-tick-line {
+          stroke: none !important;
+        }
+      }
+    }
+    .chart-footer {
+      display: flex;
+      justify-content: center;
+      height: 65px;
+      padding: 0 20px;
+
+      .metric-label {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        
+        .metric-dot {
+          display: inline-block;
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+          margin-right: 5px;
+
+          &.metric-revenue {
+            background: $--color-revenue;
+          }
+          &.metric-spend {
+            background: $--color-spend;
+          }
+          &.metric-orders {
+            background: $--color-orders;
+          }
+          &.metric-clicks {
+            background: $--color-clicks;
+          }
+          &.metric-impr {
+            background: $--color-impr;
+          }
+          &.metric-acos {
+            background: $--color-acos;
+          }
+        }
+      }
+    }
+  }
+}

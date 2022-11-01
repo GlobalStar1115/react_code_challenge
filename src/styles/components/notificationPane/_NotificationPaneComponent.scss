@@ -1,0 +1,54 @@
+.notification-pane-component {
+  @include right-pane();
+  width: 450px;
+  padding-bottom: 0;
+  overflow-y: auto;
+
+  .pane-header {
+    margin-bottom: 16px;
+  }
+
+  .pane-body {
+    padding-bottom: 20px;
+
+    button {
+      background-color: transparent;
+      text-decoration: underline;
+      color: $--blue;
+    }
+    .notification-list {
+      .notification-item {
+        padding: 5px 0px;
+        .notification-title {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          .campaign-name {
+            font-size: 16px;
+            padding-right: 5px;
+          }
+          .campaign-date {
+            font-size: 14px;
+            font-weight: 100;
+            color: $--blue;
+          }
+        }
+        .notification-history {
+          .history-title {
+            color: $--blue;
+            font-size: 14px;
+          }
+          .history-item {
+            span {
+              padding-right: 5px;
+              &.history-date {
+                color: $--blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

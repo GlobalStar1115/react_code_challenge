@@ -1,0 +1,245 @@
+$table-header-height: 40px;
+
+@mixin table-format() {
+  > .table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 24px;
+
+    .table-header-left {
+      display: flex;
+      align-items: center;
+
+      .table-header-search {
+        font-size: 13px;
+        padding: 8px 0 8px 8px;
+        border: 0;
+      }
+    }
+  }
+
+  > .table-body {
+    position: relative;
+
+    &.sticky {
+      padding-top: $table-header-height;
+
+      .content-header {
+        position: absolute;
+        z-index: 10;
+      }
+    }
+
+    .table-row {
+      display: inline-flex;
+      min-width: 100%;
+      height: 70px;
+      padding: 0 24px;
+      align-items: center;
+      border-bottom: 1px solid #DDDDDD;
+      font-size: 13px;
+      font-weight: 400;
+
+      &:hover {
+        background-color: rgba(248, 232, 176, 0.25);
+      }
+
+      &.content-header,
+      &.content-footer {
+        height: $table-header-height;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #F8F8F8;
+        font-size: 11px;
+        font-weight: 700;
+        color: $--text-color;
+      }
+
+      .table-col {
+        padding-left: 4px;
+        padding-right: 4px;
+
+        &.col-check {
+          flex: 0 0 40px;
+        }
+
+        &.click {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@mixin sortable-table-format {
+  @include table-format();
+
+  .table-row.content-header {
+    .table-col {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      > svg {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+.table {
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 25px;
+    flex-wrap: wrap;
+    .table-header-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .table-header-search {
+        font-size: 13px;
+        padding-left: 10px;
+        border: 0;
+      }
+      .search-tool, .copy-tool, .export-tool, .date-range-component {
+        padding: 5px;
+        flex: 1;
+      }
+      .search-tool {
+        flex: 2;
+      }
+      .copy-tool {
+        flex: 2;
+        white-space: nowrap;
+      }
+      .date-range-component {
+        flex: 3;
+      }
+    }
+    .table-header-right {
+      svg {
+        margin-left: 18px;
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: $--blue;
+
+          path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+  .content-header {
+    .table-col {
+      &.asc {
+        box-shadow: inset 0 3px 0 0 #38688b;
+      }
+      &.desc {
+          box-shadow: inset 0 -3px 0 0 #38688b;
+      }
+    }
+  }
+  .table-body,
+  .table-footer {
+    .table-row {
+      padding: 0 25px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 400;
+      height: 70px;
+      background-color: #F8F8F8;
+      border-bottom: 1px solid #DDDDDD;
+
+      &:hover {
+        background-color: rgba(248, 232, 176, 0.22);
+      }
+      &.content-header, &.content-footer {
+        font-size: 11px;
+        font-weight: 700;
+        color: $--text-color;
+        height: auto;
+        padding: 12px 25px;
+
+        &:hover {
+          background-color: #F8F8F8;
+        }
+      }
+
+      .table-col {
+        flex: 1;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        padding: 10px;
+        height: 100%;
+        flex-wrap: wrap;
+        &.select {
+          overflow: visible;
+          & > div {
+            width: 100%;
+          }
+        }
+        .campaign-status {
+          display: flex;
+          font-size: 9px;
+          margin-bottom: 3px;
+
+          .status {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+
+            &.on {
+              span {
+                color: #2EB73C;
+              }
+              div {
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #2EB73C;
+              }
+            }
+            &.off {
+              span {
+                color: #DDADAA;
+              }
+              div {
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #DDADAA;
+              }
+            }
+          }
+        }
+
+        @for $i from 1 through 1000 {
+          $width: 1px * $i;
+          &.table-col-width-#{$i} {
+              width: $width !important;
+          }
+          &.table-col-flex-#{$i} {
+              flex: $i !important;
+          }
+        }
+        &.check-col {
+          width: 40px;
+          flex: none;
+        }
+        &.click {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

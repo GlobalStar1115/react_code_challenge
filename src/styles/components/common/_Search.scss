@@ -1,0 +1,15 @@
+.search-component {
+    position: relative;
+    .input-search {
+        font-size: 13px;
+        padding-top: 11px;
+        padding-bottom: 12px;
+        padding-left: 42px;
+        line-height: 18px;
+    }
+    .icon-search {
+        position: absolute;
+        left: 12.5%;
+        top: 35%;
+    }
+}

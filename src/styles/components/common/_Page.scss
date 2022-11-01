@@ -1,0 +1,17 @@
+@mixin page-layout() {
+  margin: 0 60px 60px;
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .page-title {
+      font-size: 24px;
+    }
+  }
+
+  .page-content {
+    margin-top: 24px;
+  }
+}

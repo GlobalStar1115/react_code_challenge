@@ -1,0 +1,112 @@
+.campaign-selector {
+  position: relative;
+  & > button:nth-child(1) {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid $gray;
+    height: 42px;
+    background-color: $white;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .selector-container {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    border: 3px solid #868e9a;
+    border-radius: 5px;
+    height: 43px;
+
+    &.loading > div {
+      opacity: 0.5;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .header-portfolio {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0px;
+      background-color: $white;
+
+      span {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      .smart-select-wrapper {
+        display: inline-flex;
+
+        .select-wrapper {
+          width: 78%;
+          margin-right: 5px;
+        }
+
+        .btn-wrapper {
+          width: 17%;
+
+          .btn {
+            height: 43px;
+            color: #bebebe;
+            width: 100px;
+          }
+        }
+      }
+
+      .select-wrapper {
+        width: 100%;
+        margin-right: 5px;
+        border: 3px solid #868e9a;
+        border-radius: 5px;
+      }
+    }
+
+    .campaign-action {
+      display: flex;
+      justify-content: flex-end;
+
+      .btn {
+        padding: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .header-portfolio {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+
+    .smart-select-wrapper {
+      display: inline-flex;
+
+      .select-wrapper {
+        width: 78%;
+        margin-right: 5px;
+        border: 3px solid #868e9a;
+        border-radius: 5px;
+      }
+
+      .btn-wrapper {
+        width: 17%;
+
+        .btn {
+          height: 43px;
+          color: #bebebe;
+          width: 100px;
+          border: 3px solid #868e9a;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

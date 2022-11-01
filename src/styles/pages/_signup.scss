@@ -1,0 +1,39 @@
+.auth-layout {
+  .testimonial-wrapper {
+    .testimonial-contents {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    .testimonial-seller {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+
+      img {
+        max-width: 60px;
+      }
+
+      .seller-info {
+        margin-left: 16px;
+
+        .seller-name {
+          color: $--red;
+        }
+
+        .seller-job {
+          font-size: 12px;
+          color: $--gray;
+        }
+      }
+    }
+  }
+}
+
+.auth-page {
+  .auth-form {
+    .signup-input-container {
+      margin-bottom: 16px;
+    }
+  }
+}

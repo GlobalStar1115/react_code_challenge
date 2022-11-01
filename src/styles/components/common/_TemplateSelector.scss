@@ -1,0 +1,87 @@
+.template-selector-modal {
+  .rs-modal-content {
+    .rs-modal-body {
+      margin-top: 0;
+      padding-bottom: 20px + 36px;
+    }
+
+    .rs-modal-footer {
+      position: absolute;
+      // 20px is a padding inside the content area.
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 36px + 20px;
+      padding-bottom: 20px;
+      background-color: #fff;
+    }
+  }
+
+  .template-label {
+    margin-bottom: 8px;
+  }
+
+  .template-option {
+    display: flex!important;
+    align-items: center;
+    justify-content: space-between;
+
+    &.selected {
+      a {
+        color: $--green;
+      }
+    }
+
+    a {
+      font-size: 12px;
+    }
+  }
+
+  .template-details {
+    // There is 30px margin above the content area.
+    // and 20px padding inside the content area.
+    // 66px is height of select box container.
+    // 16px is a space between select box and template details.
+    // 56px is a bottom padding of the modal body.
+    max-height: calc(100vh - 60px - 40px - 66px - 16px - 56px);
+    margin-top: 16px;
+    overflow: auto;
+
+    .template-name {
+      border-bottom: 1px solid $--light-gray;
+      font-size: 15px;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    .setting-section {
+      margin-top: 8px;
+
+      .section-name {
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .setting-subsection {
+        margin-top: 4px;
+
+        .subsection-name {
+          margin-bottom: 4px;
+          font-style: italic;
+        }
+      }
+
+      .setting-wrapper {
+        margin-left: 16px;
+        font-size: 12px;
+
+        .setting-value {
+          margin-left: 8px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

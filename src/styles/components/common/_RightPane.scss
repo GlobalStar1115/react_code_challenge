@@ -1,0 +1,35 @@
+@mixin right-pane() {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #fff;
+  padding: 20px 24px;
+  // z-index of date range picker popup is 7,
+  // so a value less than 7 must be used
+  // to let date range picker work inside right pane.
+  z-index: 6;
+
+  .pane-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .pane-title {
+      font-size: 18px;
+      color: $--text-color;
+    }
+
+    .close-button {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+
+      &:hover {
+        path {
+          stroke: $--text-color;
+        }
+      }
+    }
+  }
+}

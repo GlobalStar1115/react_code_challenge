@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../assets/font/OpenSans/OpenSans-Regular.ttf');
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Open Sans';
+  color: $--text-color;
+}
+
+input {
+  font-family: 'Open Sans';
+}
+
+.search-input {
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 13px;
+  border: 1px solid #D7D7D7;
+}
+
+.btn-accent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $--accent;
+  border: 1px solid $--accent;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-usual {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #BEBEBE;
+  color: $--dark-gray;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.align-flex-start {
+  align-items: flex-start;
+}
+.direct-col {
+  flex-direction: column;
+}
+.direct-row {
+  flex-direction: row;
+}
+.main {
+  height: 100vh;
+}
+
+.table-pagination {
+  flex-wrap: wrap;
+
+  .pagination-right {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.rs-tooltip {
+  font-size: 13px !important;
+
+  .rs-tooltip-inner {
+    max-width: 480px !important;
+    padding: 8px 20px !important;
+    background-color: #337AB7 !important;
+    text-align: left !important;
+    opacity: 0.9;
+  }
+}
+
+.rs-tooltip[class*='placement-left'] {
+  .rs-tooltip-arrow {
+    border-left-color: #337AB7 !important;
+  }
+}
+
+.rs-tooltip[class*='placement-right'] {
+  .rs-tooltip-arrow {
+    border-right-color: #337AB7 !important;
+  }
+}
+
+.rs-tooltip[class*='placement-bottom'] {
+  .rs-tooltip-arrow {
+    border-bottom-color: #337AB7 !important;
+  }
+}
+
+.min-width-100 {
+  min-width: 100px !important;
+}
+
+.min-width-150 {
+  min-width: 150px !important;
+}
+
+.min-width-200 {
+  min-width: 200px !important;
+}
+
+.min-width-250 {
+  min-width: 250px !important;
+}
+
+.min-width-300 {
+  min-width: 300px !important;
+}
+
+.coin-label {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #072257;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/logo-e.png");
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.loader-component {
+  position: absolute;
+  display: flex;
+  left: calc(50% - 32px);
+  top: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

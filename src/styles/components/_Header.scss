@@ -1,0 +1,196 @@
+.header-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 60px 24px;
+
+  .header-left {
+    svg {
+      cursor: pointer;
+
+      &:hover {
+        path {
+          stroke: $--text-color;
+        }
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    .coin-component {
+      position: relative;
+      margin-right: 16px;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 2px 4px;
+        border: 1px solid $--light-gray;
+        border-radius: 4px;
+        color: $--text-color;
+        text-decoration: none;
+
+        .coin-label {
+          margin-right: 8px;
+        }
+      }
+
+      .coin-congrats-wrapper {
+        position: absolute;
+        display: flex;
+        top: 100%;
+        left: 50%;
+        width: 200px;
+        align-items: center;
+        margin-top: 8px;
+        margin-left: -100px;
+        padding: 8px 16px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 3px 18px rgba(186, 186, 186, 0.44);
+
+        .coin-label-wrapper {
+          width: 40px;
+          height: 40px;
+          margin-right: 16px;
+          padding: 5px;
+          background-image: url('../../assets/svg/coin-congrats.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          .coin-label {
+            display: block;
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .coin-info {
+          .coin-amount {
+            font-size: 15px;
+            font-weight: 600;
+          }
+
+          .coin-description {
+            font-size: 12px;
+            color: #777;
+          }
+        }
+      }
+    }
+
+    .notification-component {
+      position: relative;
+      button {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .notification-label {
+        display: flex;
+        align-items: center;
+      }
+      .notification-badge {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        background-color: $--blue;
+        color: #FFFFFF;
+        border-radius: 50%;
+        padding: 3px 7px;
+        font-size: 11px;
+      }
+    }
+
+    > svg {
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        .dropdown-content {
+          display: block;
+        }
+      }
+
+      .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        background-color: transparent;
+        cursor: pointer;
+
+        .value-text {
+          margin-right: 6px;
+        }
+      }
+
+      .dropdown-content {
+        position: absolute;
+        display: none;
+        max-height: 600px;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        background-color: white;
+        overflow: auto;
+        // z-index of new campaign button is 5.
+        z-index: 6;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 16px;
+          color: #000;
+          text-decoration: none;
+
+          .value-text {
+            margin-right: 6px;
+          }
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+      }
+    }
+
+    .header-avatar {
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+      cursor: pointer;
+
+      &:hover {
+        svg {
+          path {
+            fill: $--gray;
+          }
+        }
+      }
+
+      // Need to be same as the one on settings page (except size, font-size, and margins).
+      .initials-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 8px;
+        width: 32px;
+        height: 32px;
+        background-color: #fbab34;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+  }
+}

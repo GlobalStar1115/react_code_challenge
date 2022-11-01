@@ -1,0 +1,385 @@
+.campaign-detail-dashboard {
+  margin-top: 8px;
+  overflow: auto;
+
+  .section {
+    margin-bottom: 32px;
+    background: #fff;
+    box-shadow: $card-box-shadow;
+
+    .block-info {
+      padding: 18px 25px;
+      position: relative;
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+
+        .input-row {
+          display: flex;
+          flex-direction: column;
+          width: calc(50% - 9px);
+          justify-content: space-between;
+
+          span {
+            font-size: 14px;
+            margin-bottom: 6px;
+          }
+
+          input {
+            height: 36px;
+            border: 1px solid #D7D7D7;
+            border-radius: 6px;
+            padding-left: 12px;
+          }
+
+          .my-select__control {
+            height: 36px;
+            min-height: 36px !important;
+          }
+        }
+
+        &:nth-child(2) {
+          .input-row {
+            width: 200px;
+            margin-top: 22px;
+          }
+        }
+      }
+    }
+
+    .statistics-cards {
+      position: relative;
+      margin-top: 16px;
+      border-bottom: 1px solid #E1E1E1;
+
+      &.loading {
+        opacity: 0.5;
+      }
+
+      .statistics-cards-row {
+        display: flex;
+
+        .statistics-card {
+          width: 25%;
+          height: 90px;
+          padding-left: 25px;
+          padding-top: 16px;
+          border-left: 1px solid #E1E1E1;
+
+          &:nth-child(1) {
+            border-left: 0;
+          }
+
+          .statistics-card-name {
+            font-size: 12px;
+            font-weight: 400;
+            color: $--dark-gray;
+          }
+          .statistics-card-value {
+            font-size: 28px;
+            font-weight: 400;
+            color: $--text-color;
+          }
+        }
+      }
+
+      .statistics-cards-row + .statistics-cards-row {
+        border-top: 1px solid #E1E1E1;
+      }
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 25px 0;
+
+      h4 {
+        font-size: 15px;
+      }
+      .btn-new {
+        padding: 8px 27px;
+        color: $--white;
+        background-color: $--accent;
+        border: 1px solid $--accent;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+
+    .table-toolbar {
+      margin-top: 34px;
+      padding: 0 25px;
+      display: flex;
+        justify-content: space-between;
+
+      .table-toolbar-left {
+        display: flex;
+        align-items: center;
+
+        .table-toolbar-search {
+          font-size: 13px;
+          padding-left: 10px;
+          border: 0;
+        }
+      }
+      .table-toolbar-right {
+        svg {
+          margin-left: 18px;
+          width: 30px;
+          height: 30px;
+          padding: 6px;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background: #246FE1;
+
+            path {
+              stroke: white;
+            }
+          }
+        }
+      }
+    }
+
+    .table-row {
+      padding: 10px 25px;
+      display: flex;
+    }
+
+    .table-col {
+      padding: 5px 20px;
+    }
+
+    &.section-info {
+      position: relative;
+
+      &.loading {
+        opacity: 0.5;
+      }
+
+      .dashboard-tool {
+        padding: 18px 25px 0px 0px;
+        display: flex;
+        font-size: 12px;
+        font-weight: 600;
+        justify-content: flex-end;
+
+        .btn-campaign-save {
+          width: 110px;
+          padding: 7px 22px;
+          color: $--white;
+          text-align: center;
+          background-color: $--accent;
+          border: 1px solid $--accent;
+          border-radius: 4px;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+
+      .bidding-info {
+        flex: 1;
+        padding-left: 8px;
+
+        .row-title {
+          font-size: 15px;
+          font-weight: 600;
+        }
+        .bidding-title {
+          margin-top: 14px;
+          margin-bottom: 6px;
+          font-size: 14px;
+        }
+        .bidding-select {
+          .bid-select {
+            width: 100%;
+          }
+        }
+        .bidding-description {
+          margin-top: 5px;
+        }
+        .bidding-note {
+          max-width: 524px;
+          margin-top: 12px;
+          font-size: 13px;
+          font-style: italic;
+          color: #858383;
+        }
+
+        .bidding-values {
+          margin-top: 16px;
+
+          .bidding-col {
+            display: flex;
+            flex-direction: column;
+            margin-right: 44px;
+
+            span {
+              margin-bottom: 6px;
+              font-size: 14px;
+            }
+            input {
+              height: 36px;
+              padding-left: 12px;
+              border: 1px solid #D7D7D7;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+
+      .portfolio-info {
+        flex: 1;
+        padding-right: 8px;
+        position: relative;
+
+        .row-title {
+          font-size: 15px;
+        }
+        .selected-portfolio {
+          padding-bottom: 6px;
+          font-size: 15px;
+          p {
+            padding-right: 10px;
+          }
+          button {
+            font-size: 12px;
+          }
+        }
+        .add-new, .add-existing {
+          flex: 1;
+          .action {
+            padding-bottom: 5px;
+            button {
+              width: 100%;
+            }
+          }
+          .content {
+            width: 100%;
+          }
+        }
+        .add-new {
+          padding-bottom: 10px;
+          margin-right: 10px;
+          .content {
+            .input-new-portfolio {
+              height: 36px;
+              padding-left: 12px;
+              border-radius: 6px;
+              border: 1px solid #D7D7D7;
+              margin-right: 5px;
+              width: 100%;
+            }
+            .btn {
+              height: 36px;
+            }
+          }
+        }
+        .add-existing {
+          .content {
+            justify-content: space-between;
+            & > div {
+              width: 100%;
+            }
+            .existing-portfolio__control {
+              width: 100%;
+            }
+          }
+        }
+        .remove {
+          padding-top: 10px;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &.section-negative {
+      position: relative;
+
+      &.loading {
+        opacity: 0.5;
+      }
+
+      .table-negatives {
+        @include table-format;
+
+        .table-header-right {
+          .btn + .btn {
+            margin-left: 8px;
+          }
+        }
+
+        .col-keyword,
+        .col-target {
+          flex: 1;
+        }
+
+        .col-level {
+          flex: 0 0 180px;
+        }
+
+        .col-match-type,
+        .col-type {
+          flex: 0 0 120px;
+        }
+      }
+    }
+
+    &.section-log {
+      position: relative;
+
+      &.loading {
+        opacity: 0.5;
+      }
+
+      .table-logs {
+        @include table-format;
+
+        > .table-body {
+          .table-row {
+            height: auto;
+            min-height: 70px;
+          }
+        }
+
+        .table-header-right {
+          display: flex;
+
+          .category-selector,
+          .type-selector {
+            min-width: 180px;
+          }
+
+          .type-selector {
+            margin-left: 8px;
+          }
+
+          .type-selector + .btn {
+            margin-left: 8px;
+          }
+        }
+
+        .col-type {
+          flex: 0 0 180px;
+        }
+
+        .col-description {
+          flex: 0 0 180px;
+        }
+
+        .col-contents {
+          flex: 1;
+        }
+
+        .col-created-at {
+          flex: 0 0 64px;
+        }
+      }
+    }
+  }
+}

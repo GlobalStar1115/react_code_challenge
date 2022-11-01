@@ -1,0 +1,94 @@
+.portfolio-table-component {
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 25px;
+
+    .table-header-left {
+      display: flex;
+      align-items: center;
+
+      .table-header-search {
+        font-size: 13px;
+        padding-left: 10px;
+        border: 0;
+      }
+    }
+    .table-header-right {
+      svg {
+        margin-left: 18px;
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: #246FE1;
+
+          path {
+            stroke: white;
+          }
+        }
+      }
+    }
+  }
+
+  .table-body {
+    overflow-x: auto;
+    background-color: #F8F8F8;
+    position: relative;
+    .table-row {
+      padding: 0 25px;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 400;
+      height: 50px;
+
+      &.sub-row {
+        font-size: 11px;
+        color: $--light-blue;
+        .table-col:nth-child(1) {
+          padding-left: 50px !important;
+        }
+      }
+
+      &:hover {
+        background-color: rgba(248, 232, 176, 0.22);
+        cursor: pointer;
+      }
+
+      &.content-header, &.content-footer {
+        font-size: 11px;
+        font-weight: 700;
+        color: $--text-color;
+        height: 40px;
+        padding: 0px 25px;
+        background-color: #F8F8F8;
+        & > .table-col {
+          height: 40px;
+        }
+        &.sticky {
+          position: absolute;
+          z-index: 10;
+        }
+      }
+
+      .table-col {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        border-bottom: 1px solid #DDDDDD;
+        min-width: 75px;
+        padding: 0 3px;
+        width: 10%;
+
+        &:nth-child(1) {
+          min-width: 250px !important;
+        }
+
+      }
+    }
+  }
+}

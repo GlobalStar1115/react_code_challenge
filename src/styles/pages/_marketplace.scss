@@ -1,0 +1,184 @@
+.marketplace-page {
+  @include page-layout();
+
+  .product-selector {
+    display: flex;
+    align-items: stretch;
+
+    .product-item {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: center;
+      padding: 32px;
+      background-color: #fff;
+      box-shadow: $card-box-shadow;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+
+      &.selected {
+        border-color: $--blue;
+      }
+
+      .svg-wrapper {
+        display: flex;
+        min-height: 64px;
+        align-items: center;
+      }
+
+      .product-name {
+        margin-top: 16px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .product-description {
+        flex: 1;
+        margin-top: 16px;
+      }
+
+      .action-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 60px;
+        margin-top: 16px;
+
+        .btn {
+          min-width: 160px;
+
+          &:active,
+          &:focus {
+            text-decoration: none;
+          }
+        }
+
+        .btn + a {
+          display: block;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .product-item + .product-item {
+      margin-left: 16px;
+    }
+  }
+
+  .coaching-info,
+  .op-info {
+    position: relative;
+    margin-top: 16px;
+    padding: 32px;
+    background-color: #fff;
+    box-shadow: $card-box-shadow;
+    border-radius: 4px;
+
+    &.loading {
+      opacity: .5;
+    }
+
+    .product-name {
+      font-size: 16px;
+      font-weight: 600;
+      span {
+        font-weight: 400;
+        padding-left: 20px;
+      }
+    }
+
+    .purchase-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+
+      .price-wrapper {
+        display: flex;
+        align-items: center;
+
+        .coin-label {
+          margin-right: 8px;
+        }
+
+        .coin-balance {
+          display: inline-flex;
+          align-items: center;
+          padding: 2px 4px;
+          border: 1px solid $--light-gray;
+          border-radius: 4px;
+        }
+
+        .additional-cost {
+          margin-left: 8px;
+        }
+
+        .conversion-wrapper {
+          display: inline-flex;
+          align-items: center;
+          margin-left: 32px;
+
+          .conversion-value {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .coaching-info {
+    .product-description {
+      margin-top: 4px;
+    }
+
+    .topic-list {
+      margin-top: 16px;
+
+      .topic-item {
+        display: inline-block;
+        width: 50%;
+      }
+    }
+  }
+
+  .op-info {
+    .form-wrapper {
+      margin-bottom: 32px;
+
+      .field-wrapper {
+        margin-top: 16px;
+
+        label {
+          display: block;
+          margin-bottom: 4px;
+
+          .required {
+            margin-left: 4px;
+            color: $--red;
+          }
+        }
+
+        .field-description {
+          margin-bottom: 8px;
+          font-size: 11px;
+          color: $--gray;
+        }
+
+        input {
+          @include input-format;
+        }
+
+        textarea {
+          width: 100%;
+          height: 75px;
+          padding: 10px 12px;
+          border: 1px solid $--light-gray;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.campaign-detail-sku-op {
+  &.loading {
+    opacity: 0.5;
+  }
+
+  .table-skus {
+    @include sortable-table-format;
+
+    .table-header-right {
+      display: flex;
+
+      .btn + .btn,
+      .btn + .date-range-component {
+        margin-left: 8px;
+      }
+    }
+
+    .table-row {
+      &.bg-red {
+        background-color: $--accent;
+        color: #fff;
+        &:hover {
+          color: $--gray;
+        }
+      }
+    }
+
+    .table-col {
+      flex: 1;
+
+      &.col-state {
+        text-transform: capitalize;
+      }
+
+      &.col-sku {
+        flex: 2;
+      }
+
+      img {
+        max-height: 48px;
+      }
+    }
+  }
+}

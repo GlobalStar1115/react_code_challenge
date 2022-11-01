@@ -1,0 +1,26 @@
+.tree-list {
+  .tree-item {
+    .tree-contents {
+      padding: 4px 0px;
+      border-bottom: 1px solid #DDDDDD;
+
+      .node-info {
+        background-color: transparent;
+
+        svg {
+          margin-right: 4px;
+        }
+      }
+
+      .item-action {
+        .btn {
+          margin-left: 4px;
+        }
+      }
+    }
+
+    .tree-child {
+      padding-left: 16px;
+    }
+  }
+}

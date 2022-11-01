@@ -1,0 +1,27 @@
+.campaign-detail-keyword-cleaner {
+  .cleaner-content {
+    .table-content {
+      position: relative;
+      &.loading > div {
+        opacity: 0.5;
+      }
+    }
+    .results-container {
+      padding-top: 20px;
+      .results-tables {
+        padding-top: 5px;
+        .table {
+          min-width: auto !important;
+        }
+        .table-container {
+          flex: 1;
+          padding: 10px 10px 10px 0px;
+          .table-title h5 {
+            font-size: 15px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.dashboard-table-component {
+  background: $--white;
+  border-radius: 4px;
+  margin-top: 16px;
+  min-height: 500px;
+
+  &.loading {
+    opacity: 0.5;
+  }
+
+  .table-tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px 0;
+    border-bottom: 1px solid $tab-border-color;
+
+    .table-tab-left {
+      display: flex;
+
+      .table-tab {
+        margin-right: 16px;
+        padding-bottom: 16px;
+        font-size: 15px;
+        background-color: transparent;
+        color: $--gray;
+
+        &.selected,
+        &:hover {
+          border-bottom: 2px solid $--text-color;
+          color: $--text-color;
+        }
+      }
+    }
+
+    .table-tab-right {
+      display: flex;
+
+      svg {
+        cursor: pointer;
+
+        &:hover {
+          path {
+            stroke: $--blue;
+          }
+        }
+      }
+    }
+  }
+}

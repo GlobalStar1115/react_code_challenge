@@ -1,0 +1,66 @@
+.campaign-chart-component {
+  position: relative;
+  height: 375px;
+  margin-top: 18px;
+  padding: 16px 24px;
+  background: #fff;
+
+  &.loading {
+    opacity: .5;
+  }
+
+  .chart-header {
+    height: 50px;
+  }
+
+  .chart-content {
+    height: calc(100% - 50px);
+
+    .recharts-xAxis {
+      .recharts-cartesian-axis-line {
+        stroke: none !important;
+      }
+      .recharts-cartesian-axis-tick-line {
+        stroke: none !important;
+      }
+    }
+    .recharts-yAxis {
+      .recharts-cartesian-axis-line {
+        stroke: none !important;
+      }
+      .recharts-cartesian-axis-tick-line {
+        stroke: none !important;
+      }
+    }
+    .recharts-surface {
+      padding-bottom: 10px;
+    }
+    .recharts-legend-wrapper {
+      text-align: center;
+
+      .legend-list {
+        margin-top: 10px;
+        margin-bottom: 0;
+
+        li {
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+
+          .bullet {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
+            border: 2px transparent solid;
+            border-radius: 6px;
+          }
+        }
+
+        li + li {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

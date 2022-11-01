@@ -1,0 +1,36 @@
+.optimization-keyword {
+  position: relative;
+
+  &.loading {
+    opacity: 0.5;
+  }
+
+  .adjust-bid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bid-select {
+      width: 20%;
+      padding-right: 10px;
+    }
+    .btn-apply {
+      background-color: $red;
+      color: $white;
+      border: 1px solid $red;
+      padding: 3px 11px;
+    }
+    .btn-cancel {
+      padding: 3px 11px;
+    }
+
+    .bid-val {
+      padding-right: 10px;
+
+      input {
+        border-radius: 5px;
+        padding: 7px 22px;
+      }
+    }
+  }
+}

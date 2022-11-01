@@ -1,0 +1,44 @@
+.auth-page {
+  .auth-form {
+    .login-email,
+    .login-password {
+      position: relative;
+      margin-bottom: 16px;
+
+      img {
+        position: absolute;
+        padding: 12px 14px;
+      }
+
+      input {
+        padding-left: 40px;
+      }
+    }
+
+    .btn + .login-or-hr {
+      margin-top: 16px;
+    }
+
+    .login-or-hr {
+      margin-bottom: 16px;
+    }
+
+    .login-btn-amazon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 38px;
+      border-radius: .25rem;
+      border: 1px solid #BBBBBB;
+      font-size: 13px;
+      color: $--deep-gray;
+      cursor: pointer;
+
+      img {
+        margin-right: 8px;
+        padding-top: 4px;
+      }
+    }
+  }
+}

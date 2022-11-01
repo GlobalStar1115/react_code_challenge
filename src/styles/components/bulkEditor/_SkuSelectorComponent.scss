@@ -1,0 +1,54 @@
+.selector-parent {
+  position: relative;
+
+  & > button:nth-child(1) {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid $gray;
+    height: 42px;
+    background-color: $white;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .selector-container {
+    box-shadow: $box-shadow;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    background-color: $white;
+    z-index: 1;
+
+    &.loading > div {
+      opacity: 0.5;
+    }
+    .header {
+      padding-bottom: 10px;
+    }
+
+    .adgroups-action {
+      display: flex;
+      justify-content: flex-end;
+
+      .btn {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      .btn-select {
+        background-color: $red;
+        border: 1px solid $red;
+        color: $white;
+      }
+      .btn-cancel {
+        background-color: $gray;
+        border: 1px solid $gray;
+        color: $white;
+      }
+    }
+  }
+}

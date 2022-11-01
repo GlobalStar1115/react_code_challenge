@@ -1,0 +1,177 @@
+.setting-page {
+  @include page-layout;
+
+  .page-content {
+    box-shadow: $card-box-shadow;
+    background: #fff;
+
+    .page-section {
+      position: relative;
+      padding: 16px 24px;
+
+      &.loading {
+        opacity: .5;
+      }
+
+      input {
+        @include input-format;
+      }
+
+      .section-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: $--text-color;
+      }
+
+      .section-note {
+        margin-top: 4px;
+        font-size: 12px;
+        color: $--gray;
+      }
+
+      .section-contents {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+
+        &.section-general {
+          .field-wrapper {
+            margin-right: 16px;
+
+            input {
+              margin-top: 4px;
+            }
+          }
+
+          .btn {
+            margin-top: 23px;
+          }
+        }
+
+        &.section-amazon {
+          .initials-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: #fbab34;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+          }
+
+          .account-info {
+            display: flex;
+            flex-direction: column;
+            min-width: 160px;
+            margin: 0 16px;
+
+            div:nth-child(1) {
+              margin-bottom: 4px;
+              font-size: 12px;
+              color: $card-title-color;
+            }
+            div:nth-child(2) {
+              font-size: 13px;
+              color: $--text-color;
+            }
+          }
+        }
+
+        &.section-billing {
+          .card-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 240px;
+            height: 150px;
+            margin-right: 16px;
+            padding: 16px;
+            background-color: #374454;
+            border-radius: 4px;
+            color: #fff;
+
+            .card-header {
+              .card-status {
+                margin-left: 8px;
+                font-size: 11px;
+              }
+            }
+
+            .card-number {
+              font-size: 14px;
+              font-weight: 700;
+            }
+
+            .card-info {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .card-info-field {
+                div:nth-child(1) {
+                  font-size: 11px;
+                  font-weight: 400;
+                }
+
+                div:nth-child(2) {
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+
+        &.section-security {
+          input {
+            width: auto;
+            margin-right: 16px;
+          }
+        }
+
+        &.section-universal {
+          .field-wrapper {
+            margin-right: 16px;
+
+            label {
+              display: flex;
+              align-items: center;
+
+              svg {
+                margin-left: 8px;
+              }
+            }
+
+            input {
+              margin-top: 4px;
+            }
+          }
+
+          .btn {
+            margin-top: 23px;
+          }
+        }
+
+        &.section-notification {
+          .checkbox-component {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+
+    .page-section + .page-section {
+      border-top: 1px solid $tab-border-color;
+    }
+  }
+}
+
+.settings-password-modal {
+  input {
+    @include input-format;
+    margin-top: 4px;
+  }
+}

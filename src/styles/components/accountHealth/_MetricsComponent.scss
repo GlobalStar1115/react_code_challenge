@@ -1,0 +1,35 @@
+.account-health-metrics {
+	.table-row {
+		display: flex;
+		align-items: center;
+		padding: 0 25px;
+
+		.table-col {
+			width: 10%;
+		}
+		.table-col:nth-child(1) {
+			width: 20%;
+		}
+	}
+	.table-header {
+		.table-row {
+			height: 38px;
+			font-size: 11px;
+			font-weight: 700;
+		}
+	}
+	.table-body {
+		.table-row {
+			height: 74px;
+			font-size: 13px;
+		}
+	}
+	.table-footer {
+		.table-row {
+			height: 40px;
+			font-size: 11px;
+			font-weight: 700;
+			border-top: 1px solid #DDDDDD;
+		}
+	}
+}

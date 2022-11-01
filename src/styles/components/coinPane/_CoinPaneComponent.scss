@@ -1,0 +1,197 @@
+.coin-pane-component {
+  @include right-pane();
+  width: 450px;
+  padding-bottom: 0;
+  overflow-y: auto;
+
+  .pane-header {
+    margin-bottom: 16px;
+  }
+
+  .pane-body {
+    padding-bottom: 20px;
+  }
+
+  .pane-footer {
+    position: sticky;
+    left: 24px;
+    right: 24px;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .redeem-section {
+    .redeem-contents {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      border: 1px solid $--light-gray;
+      border-radius: 4px;
+
+      .coin-label {
+        width: 36px;
+        height: 36px;
+        margin-right: 16px;
+      }
+
+      .redeem-coin {
+        flex: 1;
+
+        .redeem-amount {
+          font-size: 16px;
+          font-weight: 600;
+          color: $--text-color;
+        }
+
+        .redeem-description {
+          font-size: 12px;
+          color: #777;
+        }
+      }
+
+      .btn:active,
+      .btn:focus {
+        text-decoration: none;
+      }
+    }
+
+    .redeem-conversion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #727272;
+
+      .conversion-value {
+        display: flex;
+        align-items: center;
+
+        .coin-label {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .task-section {
+    margin: 16px 0;
+    text-align: center;
+
+    .task-border {
+      position: relative;
+
+      .contents-wrapper {
+        display: inline-block;
+        padding: 0 16px;
+        background-color: #fff;
+
+        a {
+          &:focus,
+          &:active {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .back-line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        border-top: 2px solid $--light-gray;
+        z-index: -1;
+      }
+    }
+
+    .task-contents {
+      padding: 16px;
+    }
+  }
+
+  .guide-section,
+  .history-section {
+    margin-top: 16px;
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      border-bottom: 1px dashed #000;
+      cursor: pointer;
+    }
+
+    .section-contents {
+      margin-top: 8px;
+    }
+  }
+
+  .guide-section {
+    .section-contents {
+      .flow-item {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+
+        > svg {
+          margin-right: 4px;
+          width: 24px;
+          height: 24px;
+
+          &.status-completed {
+            path {
+              stroke: $--green;
+            }
+          }
+
+          &.status-incomplete {
+            path {
+              stroke: $--red;
+            }
+          }
+        }
+
+        .flow-name {
+          flex: 1;
+        }
+
+        .flow-coin {
+          color: $--red;
+        }
+      }
+    }
+  }
+
+  .history-section {
+    .section-contents {
+      .history-item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 4px;
+        border-bottom: 1px solid $--light-gray;
+        font-size: 13px;
+
+        .history-description {
+          flex: 1;
+        }
+
+        .history-coin {
+          &.history-earn {
+            color: $--red;
+          }
+
+          &.history-redeem {
+            color: $--blue;
+          }
+        }
+      }
+
+      .history-item + .history-item {
+        margin-top: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.account-health-performance {
+  .performance-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid $--light-gray;
+  }
+  .table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 25px;
+    font-size: 15px;
+  }
+  .table-row {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+
+    .table-col {
+      width: 10%;
+    }
+    .table-col:nth-child(1) {
+      width: 20%;
+    }
+  }
+  .table-header {
+    .table-row {
+      height: 35px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+  }
+  .table-body {
+    .table-row {
+      height: 38px;
+      font-size: 13px;
+      border-top: 1px solid $--light-gray;
+    }
+    .table-row:nth-child(1) {
+      border: 0;
+    }
+  }
+  .table-footer {
+    .table-row {
+      height: 40px;
+      font-size: 11px;
+      font-weight: 600;
+      border-top: 1px solid $--light-gray;
+    }
+  }
+}

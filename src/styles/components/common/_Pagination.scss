@@ -1,0 +1,98 @@
+// Used inside APM to render a compact version of paginator.
+@mixin pagination-compact() {
+  flex-direction: column;
+
+  .pagination-left {
+    margin-bottom: 8px;
+  }
+
+  .pagination-right {
+    li.page-item {
+      padding: 4px;
+    }
+  }
+}
+
+.table-pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  align-items: center;
+
+  .pagination-right {
+    display: flex;
+    align-items: center;
+
+    > ul {
+      margin-right: 16px;
+      margin-bottom: 0;
+
+      li {
+        display: inline;
+      }
+    }
+
+    .select-pagination-pages__control {
+      height: 32px;
+      min-height: 32px;
+      font-size: 12px;
+
+      .select-pagination-pages__value-container {
+        display: flex;
+        justify-content: center;
+        min-width: 30px;
+      }
+
+      .select-pagination-pages__single-value {
+        top: 50%;
+      }
+      .select-pagination-pages__indicator {
+        height: 30px;
+        min-height: 30px;
+      }
+      .select-pagination-pages__dropdown-indicator {
+        padding: 5px 4px;
+      }
+    }
+
+    .prev-one {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .prev-two {
+      margin-right: 10px;
+      letter-spacing: -5px;
+      cursor: pointer;
+    }
+    .page-no {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    li.page-item {
+      list-style: none;
+      padding: 8px;
+    }
+    li.page-item.active {
+      .page-link {
+        color: black;
+        background-color: #ced4da !important;
+        border-color: #ced4da !important;
+      }
+    }
+
+    .page-link {
+      padding: 0.375rem 0.75rem;
+      min-width: 2.5rem;
+      border-radius: 4px;
+      box-shadow: none !important;
+      font-size: 13px;
+      font-weight: 700;
+      color: $--text-color;
+      text-align: center;
+
+      &:hover {
+        background-color: #ced4da !important;
+      }
+    }
+  }
+}

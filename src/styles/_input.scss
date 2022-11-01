@@ -1,0 +1,7 @@
+@mixin input-format() {
+  width: 100%;
+  height: 38px;
+  border: 1px solid $--light-gray;
+  border-radius: 6px;
+  padding: 0 12px;
+}

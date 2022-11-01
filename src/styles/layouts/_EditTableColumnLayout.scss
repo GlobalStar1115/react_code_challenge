@@ -1,0 +1,62 @@
+.edit-table-column-layout {
+  @include right-pane;
+  width: 300px;
+
+  .edit-table-column-body {
+    overflow-y: auto;
+    height: calc(100% - 120px);
+
+    .saved-view {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-bottom: 24px;
+      font-size: 14px;
+
+      span:nth-child(1) {
+        margin-bottom: 6px;
+      }
+
+      .my-saved-view__control {
+        font-size: 13px;
+      }
+    }
+    .column-row {
+      display: flex;
+      margin-bottom: 18px;
+
+      span:nth-child(2) {
+        margin-left: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .edit-table-column-note {
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-size: 12px;
+
+    span {
+      margin-right: 2px;
+    }
+    a {
+      color: #246fE1;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .edit-table-column-footer {
+    position: fixed;
+    display: flex;
+    bottom: 24px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+
+    .btn {
+      min-width: 120px;
+    }
+  }
+}

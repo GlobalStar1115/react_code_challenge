@@ -1,0 +1,104 @@
+.activity-log {
+  @include page-layout;
+
+  .page-header {
+    .page-title {
+      svg {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .page-content {
+    position: relative;
+    margin-bottom: 24px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: $card-box-shadow;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px 0;
+    border-bottom: 1px solid $tab-border-color;
+
+    .tab-container {
+      padding-top: 16px;
+
+      a {
+        display: inline-block;
+        padding: 0 8px 16px;
+        font-size: 15px;
+        color: $--gray;
+
+        &.active,
+        &:hover {
+          border-bottom: 2px solid $--text-color;
+          color: $--text-color;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      a + a {
+        margin-left: 16px;
+      }
+    }
+
+    .filter-container {
+      display: flex;
+      padding-bottom: 16px;
+
+      .type-selector {
+        min-width: 200px;
+      }
+
+      .btn + .type-selector,
+      .type-selector + .date-range-component {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .table-logs {
+    @include table-format;
+
+    > .table-body {
+      .table-row {
+        height: auto;
+        min-height: 70px;
+      }
+    }
+
+    .col-type {
+      flex: 0 0 180px;
+      text-transform: capitalize;
+    }
+
+    .col-campaign {
+      flex: 0 0 200px;
+
+      svg {
+        margin-left: 8px;
+        vertical-align: bottom;
+      }
+    }
+
+    .col-description {
+      flex: 0 0 180px;
+    }
+
+    .col-contents {
+      flex: 1;
+      padding: 8px 0;
+    }
+
+    .col-created-at {
+      flex: 0 0 64px;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.tutorial-page {
+  @include page-layout;
+
+  .page-content {
+    margin-bottom: 24px;
+    padding: 16px 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: $card-box-shadow;
+  }
+
+  .flow-container {
+    padding: 0 24px;
+
+    .flow-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      cursor: pointer;
+
+      .flow-name {
+        border-bottom: 1px dashed;
+        font-size: 16px;
+        font-weight: 600;
+        color: $--text-color;
+
+        &:focus,
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .coin-balance {
+        .coin-label {
+          margin-right: 8px;
+        }
+
+        display: inline-flex;
+        align-items: center;
+        padding: 2px 4px;
+        border: 1px solid $--light-gray;
+        border-radius: 4px;
+      }
+    }
+
+    .flow-body {
+      padding: 16px 0;
+
+      .video-list {
+        display: flex;
+
+        .video-item {
+          width: 25%;
+
+          .video-name {
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: $--blue;
+          }
+
+          .wistia_responsive_padding {
+            position: relative;
+            padding: 56.25% 0 0 0;
+          }
+
+          .wistia_responsive_wrapper {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+
+          .wistia_embed {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .video-item + .video-item {
+          margin-left: 32px;
+        }
+      }
+
+      .flow-text {
+        padding: 16px 0;
+      }
+
+      .attachment-list {
+        .attachment-item {
+          display: inline-flex;
+          align-items: center;
+
+          a {
+            margin-left: 8px;
+            text-decoration: underline;
+          }
+        }
+
+        .attachment-item + .attachment-item {
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+
+  .flow-container + .flow-container {
+    border-top: 2px solid $--light-gray;
+  }
+}

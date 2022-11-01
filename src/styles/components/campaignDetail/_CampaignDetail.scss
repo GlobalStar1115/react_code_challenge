@@ -1,0 +1,330 @@
+.campaign-detail-component {
+  margin: 0 60px 60px;
+
+  .page-header {
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    .campaign-selector-container {
+      position: relative;
+
+      .toggle-button {
+        display: inline-flex;
+        align-items: center;
+        font-size: 24px;
+        color: $--dark-gray;
+        border-bottom: 1px dashed $--gray;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: none;
+        }
+
+        svg {
+          margin-left: 8px;
+          font-size: 12px;
+        }
+      }
+
+      .campaign-name-wrapper {
+        display: flex;
+        align-items: center;
+
+        .status {
+          display: inline-flex;
+          align-items: center;
+          margin-left: 32px;
+          margin-right: 8px;
+
+          &.on {
+            color: #2EB73C;
+          }
+
+          &.off {
+            color: $--accent;
+          }
+        }
+
+        svg {
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }
+      }
+
+      .selector-contents {
+        position: absolute;
+        width: 320px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: $card-box-shadow;
+        // z-index of date range picker popup is 7,
+        z-index: 8;
+
+        .table-campaign-selector {
+          @include table-format;
+
+          .table-row {
+            &.selected {
+              background-color: $--blue;
+
+              &:hover {
+                background-color: $--blue;
+              }
+
+              a {
+                color: #fff;
+
+                .campaign-detail {
+                  color: $--light-gray;
+                }
+              }
+            }
+          }
+
+          .table-col {
+            flex: 1;
+
+            a {
+              display: block;
+
+              &:hover,
+              &:focus,
+              &:active {
+                text-decoration: none;
+              }
+
+              .campaign-name {
+                display: block;
+                margin-bottom: 4px;
+              }
+
+              .campaign-detail {
+                font-size: 11px;
+                color: $--gray;
+
+                span + span {
+                  margin-left: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .page-header__buttons {
+      display: flex;
+      font-size: 12px;
+      font-weight: 600;
+
+      .page-header__button-custom {
+        width: 110px;
+        padding: 7px 14px;
+        color: $--dark-gray;
+        border: 1px solid #BEBEBE;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .page-header__button-new {
+        width: 110px;
+        padding: 7px 22px;
+        color: $--white;
+        text-align: center;
+        background-color: $--accent;
+        border: 1px solid $--accent;
+        border-radius: 4px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .campaign-detail-tab {
+    margin-top: 8px;
+    padding: 16px 24px;
+    background: #fff;
+    box-shadow: $card-box-shadow;
+    overflow: auto;
+  }
+
+  .page-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 400;
+    color: $--gray;
+
+    .page-tab {
+      margin-right: 28px;
+      padding-bottom: 13px;
+      background-color: transparent;
+      border-bottom: 2px solid transparent;
+
+      &.selected, &:hover {
+        color: $--text-color;
+        border-bottom: 2px solid $--text-color;
+      }
+    }
+  }
+  .table {
+    min-width: 900px;
+  }
+  .table-action {
+    padding: 10px 25px;
+    display: flex;
+    .btn {
+      font-size: 13px;
+      margin-right: 10px;
+      border-radius: 4px;
+      padding: 7px 22px;
+    }
+  }
+
+  .tab-info {
+    display: flex;
+    align-items: center;
+
+    .tab-title {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 600;
+
+      > svg {
+        margin-left: 8px;
+      }
+    }
+
+    .tab-description {
+      margin-left: 32px;
+      font-size: 14px;
+    }
+  }
+
+  .tab-list {
+    margin-top: 16px;
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 16px;
+      padding-bottom: 4px;
+      background-color: transparent;
+      border-bottom: 2px solid white;
+      color: $--gray;
+
+      &.selected,
+      &:hover {
+        color: $--text-color;
+        border-bottom-color: $--text-color;
+      }
+
+      > svg {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .adgroup-selector {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      margin-left: 8px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .acos-container {
+    display: inline-flex;
+    align-items: center;
+    span {
+      padding-right: 5px;
+      font-weight: 600;
+      font-size: 14px;
+      color: $--blue;
+    }
+    input {
+      height: 36px;
+      border: 1px solid #D7D7D7;
+      border-radius: 6px;
+      padding-left: 12px;
+      width: 100px;
+    }
+  }
+}
+
+.modal-add-negatives {
+  .top-section,
+  .bottom-section {
+    display: flex;
+
+    .section-container {
+      flex: 1;
+
+      .section-title {
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+    }
+
+    .section-container + .section-container {
+      margin-left: 16px;
+    }
+  }
+
+  .bottom-section {
+    margin-top: 16px;
+  }
+
+  .table-negatives,
+  .table-adgroups {
+    @include table-format;
+
+    .table-col {
+      flex: 1;
+    }
+
+    .table-body {
+      .table-row {
+        height: 48px;
+      }
+    }
+  }
+}
+
+.modal-add-negative-asins {
+  .section-row {
+    display: flex;
+
+    .section-container {
+      flex: 1;
+
+      .section-title {
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+    }
+
+    .section-container + .section-container {
+      margin-left: 16px;
+    }
+  }
+
+  .table-negatives,
+  .table-adgroups {
+    @include table-format;
+
+    .table-col {
+      flex: 1;
+    }
+
+    .table-body {
+      .table-row {
+        height: 48px;
+      }
+    }
+  }
+}

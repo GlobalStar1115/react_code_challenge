@@ -1,0 +1,221 @@
+.ap-component {
+  @include right-pane();
+  width: 720px;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow-y: auto;
+
+  .top-container {
+    position: sticky;
+    display: block;
+    top: 0;
+    margin: 0 -24px;
+    padding: 20px 24px 20px;
+    background-color: #072257;
+    // z-index of react-select is 1.
+    z-index: 2;
+
+    .pane-header {
+
+      .left-column {
+        display: flex;
+        align-items: center;
+
+        .pane-title {
+          font-size: 18px;
+          color: #ffffff;
+        }
+      }
+
+      .right-column {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-left: 18px;
+          width: 30px;
+          height: 30px;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            path {
+              stroke: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pane-body {
+    .section-container {
+      padding: 16px;
+
+      .section-header {
+        font-size: 16px;
+        font-weight: 600;
+
+        .text-center{
+          margin-bottom: 10px;
+          font-weight: 500;
+
+          .edit-input {
+            width: 100%;
+            height: 35px;
+            padding: 10px 12px;
+            border: 1px solid $--light-gray;
+            border-radius: 6px;
+            resize: none;
+          }
+        }
+
+        .bold {
+          font-weight: 600;
+        }
+
+        .section-body {
+          padding: 16px;
+          border: 1px solid #D9D9D9;
+          width: 100%;
+          border-radius: 14px;
+
+          .campaign-list {
+            overflow-y: auto;
+            height: 205px;
+
+            .campaign-list-item {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 10px;
+              margin-right: 10px;
+
+              .left-column {
+                display: flex;
+                align-items: center;
+
+                .pane-title {
+                  font-size: 14px;
+                  font-weight: 400;
+                }
+              }
+
+              .right-column {
+                display: flex;
+                align-items: center;
+
+                svg {
+                  width: 18px;
+                  height: 18px;
+                  border-radius: 4px;
+                  cursor: pointer;
+
+                  &:hover {
+                    path {
+                      stroke: #615f5f;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .table-toolbar {
+          margin: 10px 0px;
+          display: flex;
+          justify-content: space-between;
+
+          .table-toolbar-left {
+            display: flex;
+            align-items: center;
+
+            .table-toolbar-search {
+              font-size: 13px;
+              padding-left: 10px;
+              border: 0;
+            }
+          }
+          .table-toolbar-right {
+
+            svg {
+              margin-left: 18px;
+              width: 30px;
+              height: 30px;
+              padding: 6px;
+              border-radius: 4px;
+              cursor: pointer;
+
+              &:hover {
+                background: #246FE1;
+
+                path {
+                  stroke: white;
+                }
+              }
+            }
+
+            .edit-input {
+              width: 100%;
+              height: 35px;
+              padding: 5px 5px;
+              border: 1px solid $--light-gray;
+              border-radius: 6px;
+              resize: none;
+            }
+          }
+        }
+      }
+
+      .section-footer {
+        position: sticky;
+        display: flex;
+        bottom: 0;
+        margin: 0 -24px;
+        padding: 20px 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #fff;
+
+        .btn {
+          min-width: 120px;
+        }
+
+        .btn-red {
+          color: #fff;
+          background-color: #dd1818;
+          background-image: none;
+          border-color: #b41010;
+        }
+
+        .btn-gray {
+          color: #fff;
+          background-color: #706c6c;
+          background-image: none;
+          border-color: #272525;
+        }
+
+        .btn + .btn {
+          margin-left: 16px;
+          border-radius: .25rem;
+        }
+
+        .rs-dropdown-item-content {
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .save-error {
+        color: red;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.account-health-reports {
+  .report-table {
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $--light-gray;
+    overflow-x: scroll;
+
+    .table-title {
+      padding: 0 20px;
+      font-weight: 600;
+    }
+    .table-row {
+      display: flex;
+      align-items: center;
+      padding: 0 25px;
+
+      .table-col {
+        width: 10%;
+        min-width: 75px;
+        margin-right: 10px;
+      }
+      .table-col:nth-child(1) {
+        min-width: 150px;
+        width: 20%;
+      }
+    }
+    .table-header {
+      .table-row {
+        height: 50px;
+        font-size: 11px;
+        font-weight: 700;
+      }
+    }
+    .table-body {
+      .table-row {
+        height: 74px;
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.dashboard-page {
+  @include page-layout;
+
+  .page-header {
+    .ad-type-selector {
+      min-width: 270px;
+      margin-right: 10px;
+    }
+
+    .page-header-buttons {
+      display: flex;
+      font-size: 12px;
+
+      .page-header-button-custom, .page-header-button-save, .page-header-button-cancel {
+        margin-right: 10px;
+        padding: 6px 12px;
+        border: 1px solid $page-button-border-color;
+        border-radius: 6px;
+        color: $--dark-gray;
+        cursor: pointer;
+      }
+
+      .new-campaign-toggle {
+        background-color: $--accent!important;
+        color: #fff!important;
+      }
+    }
+  }
+
+  .kpi-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+
+    &.loading {
+      opacity: .5;
+    }
+
+    .kpi-card {
+      width: 25%;
+      padding: 8px 16px;
+
+      .kpi-card-inner {
+        min-height: 98px;
+        padding: 16px 24px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: $card-box-shadow;
+
+        &.loading {
+          opacity: 0.5;
+        }
+
+        &.kpi-empty {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparent;
+          border: 1px dashed $card-null-background-color;
+          box-shadow: none;
+          color: $card-null-color;
+          cursor: pointer;
+
+          .metric-selector {
+            min-width: 80%;
+
+            .metric-selector__menu {
+              // z-index of date range picker is 5, and this should be
+              // put above it.
+              z-index: 6;
+            }
+          }
+        }
+
+        .metric-name {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 12px;
+          color: $card-title-color;
+          white-space: nowrap;
+          svg:hover {
+            path {
+              stroke: $--text-color;
+            }
+          }
+
+          .trash-icon {
+            cursor: pointer;
+          }
+        }
+
+        .metric-value {
+          display: flex;
+          align-items: center;
+          margin-top: 8px;
+          font-size: 28px;
+          color: $card-value-color;
+          white-space: nowrap;
+          img {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+    .plus-icon-container {
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.account-health-component {
+  box-shadow: $card-box-shadow;
+  background: #FFFFFF;
+  padding-top: 18px;
+
+  &.isLoading {
+    opacity: 0.5;
+  }
+
+  .component-notification {
+    padding: 0 25px;
+    margin-bottom: 25px;
+
+    ul > li > a {
+      display: flex;
+      > span {
+        padding-left: 5px;
+      }
+    }
+    > div > a {
+      padding-left: 0;
+    }
+  }
+
+  .component-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    margin-bottom: 28px;
+
+    .header-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(25% - 25px);
+
+      span {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      .date-range-component {
+        min-width: 220px;
+      }
+
+      &.date-range-container {
+        position: relative;
+      }
+    }
+  }
+
+  .component-body {
+    .component-tabs {
+      display: flex;
+      padding: 16px 25px 0;
+      border-bottom: 1px solid #D8D8D8;
+
+      .component-tab {
+        margin-right: 18px;
+        padding-bottom: 16px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #979797;
+        cursor: pointer;
+
+        &.selected, &:hover {
+          border-bottom: 2px solid #292929;
+          color: $--text-color;
+        }
+      }
+    }
+  }
+
+  .metric-chart {
+    margin-top: 50px;
+    border-top: 1px solid #D8D8D8;
+
+    .chart-row {
+      display: flex;
+      padding: 0 25px;
+      border-bottom: 1px solid #D8D8D8;
+
+      .chart-col {
+        padding-top: 20px;
+        height: 180px;
+
+        &:nth-child(1) {
+          width: 150px;
+          border-right: 1px solid #D8D8D8;
+        }
+        &:nth-child(2) {
+          width: calc(100% - 150px)
+        }
+      }
+    }
+  }
+}

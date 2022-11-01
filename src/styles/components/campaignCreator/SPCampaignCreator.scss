@@ -1,0 +1,85 @@
+.sp-campaign-creator {
+  .page-content {
+    .portfolio-selector__menu {
+      // z-index of datepicker is 5.
+      z-index: 6;
+    }
+
+    .keyword-container {
+      margin-top: 16px;
+      border: 1px solid #C7C7C7;
+
+      .keyword-box {
+        padding: 16px;
+        border-top: 1px solid #C7C7C7;
+
+        &:nth-child(1) {
+          border: 0;
+        }
+
+        .box-header {
+          .match-selector {
+            .match-select__control {
+              width: 290px;
+            }
+            .match-title {
+              padding-right: 10px;
+            }
+          }
+
+          .apply-section {
+            display: flex;
+            align-items: center;
+
+            .btn + .btn {
+              margin-left: 8px;
+            }
+          }
+
+          svg {
+            cursor: pointer;
+          }
+        }
+
+        .box-content {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 16px;
+          padding-right: 50px;
+
+          input {
+            @include input-format;
+            display: inline-block;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    .keyword-input-section {
+      margin-top: 8px;
+
+      .match-select__control {
+        width: 200px;
+      }
+
+      .match-title {
+        padding-right: 4px;
+      }
+
+      .negative-keyword-list {
+        @include input-format;
+        height: auto;
+        margin-top: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+
+    .btn-add-keyword {
+      margin-top: 16px;
+    }
+  }
+}
